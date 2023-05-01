@@ -1,3 +1,100 @@
+# Introduction
+This repository aims to educate data scientist to write better and more beautiful python codes using available open-source tools.
+
+Enjoy!
+## PEP8 - Style Guide for Pyton Code [link](https://peps.python.org/pep-0008/)
+- [How to Write Beautiful Python Code With PEP 8](https://realpython.com/python-pep8/)
+- [Nine simple steps for better-looking python code](https://towardsdatascience.com/nine-simple-steps-for-better-looking-python-code-87e5d9d3b1cf)
+- [15 common coding mistakes data scientist make in Python (and how to fix them)](https://towardsdatascience.com/15-common-coding-mistakes-data-scientist-make-in-python-and-how-to-fix-them-7760467498af)
+- [How to Automate Python Code Formatting (using Black, YAPF and isort)](https://www.youtube.com/watch?v=q2d5vrw1Lss)
+
+![example_bad_pep8.py](/img/example_bad.PNG)
+```sh
+pylint example_bad_pep8.py
+
+************* Module example_bad_pep8
+example_bad_pep8.py:19:0: C0304: Final newline missing (missing-final-newline)
+example_bad_pep8.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+example_bad_pep8.py:2:0: C0103: Constant name "x" doesn't conform to UPPER_CASE naming style (invalid-name)
+example_bad_pep8.py:6:0: C0115: Missing class docstring (missing-class-docstring)
+example_bad_pep8.py:6:0: C0103: Class name "myrect" doesn't conform to PascalCase naming style (invalid-name)
+example_bad_pep8.py:10:4: C0116: Missing function or method docstring (missing-function-docstring)
+example_bad_pep8.py:6:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+example_bad_pep8.py:15:0: W0105: String statement has no effect (pointless-string-statement)
+example_bad_pep8.py:1:0: W0611: Unused pandas imported as pd (unused-import)
+
+-----------------------------------
+Your code has been rated at 3.08/10
+```
+
+![example_good_pep8.py](/img/example_good.PNG)
+```sh
+pylint example_good_pep8.py
+
+************* Module example_good_pep8
+example_good_pep8.py:5:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+
+-----------------------------------
+Your code has been rated at 9.00/10
+```
+
+``` python
+class MyRect: # pylint: disable=too-few-public-methods
+-------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 9.00/10, +1.00)
+```
+
+## Auto-formatter
+- black [https://github.com/psf/black](https://github.com/psf/black)
+- yapf [https://github.com/google/yapf](https://github.com/google/yapf) (own by Google)
+- isort [https://github.com/PyCQA/isort](https://github.com/PyCQA/isort)
+
+```sh
+# command line
+black example_bad_pep8.py
+yapf -i --style=.style.yapf example_bad_pep8.py
+isort example_bad_pep8.py
+```
+
+``` python
+# before using yapf
+x = {  'a':37,'b':42,
+
+'c':927}
+
+y = 'hello ''world'
+z = 'hello '+'world'
+a = 'hello {}'.format('world')
+class foo  (     object  ):
+  def f    (self   ):
+    return       37*-+2
+  def g(self, x,y=42):
+      return y
+def f  (   a ) :
+  return      37+-+a[42-x :  y**3]
+```
+
+``` python
+# after using yapf
+x = {'a': 37, 'b': 42, 'c': 927}
+
+y = 'hello ' 'world'
+z = 'hello ' + 'world'
+a = 'hello {}'.format('world')
+
+
+class foo(object):
+    def f(self):
+        return 37 * -+2
+
+    def g(self, x, y=42):
+        return y
+
+
+def f(a):
+    return 37 + -+a[42 - x:y**3]
+
+```
 
 # Visual Code and  useful extensions
 
@@ -5,7 +102,7 @@
 
 2. Install **`Extensions`** from [vsixhub](https://www.vsixhub.com/) credit: [VSCode extensions you need to know for python programming](https://www.youtube.com/watch?v=SxzzFwzPYqo). Some extensions are need to be downloaded manually and installed without inxternet.
 
-> **Python**
+> ## Python
 
 `Python`: A Visual Studio Code extension with rich support for the Python language (for all actively supported versions of the language: >=3.7), including features such as IntelliSense (Pylance), linting, debugging, code navigation, code formatting, refactoring, variable explorer, test explorer, and more! [link](https://www.vsixhub.com/vsix/116173/)
 
@@ -51,7 +148,7 @@ def area(width: float, height: float) -> float:
 
 `GitLens`:  GitLens supercharges Git inside VS Code and unlocks untapped knowledge within each repository. It helps you to visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git repositories, gain valuable insights via rich visualizations and powerful comparison commands, and so much more. [link](https://www.vsixhub.com/vsix/112166/)
 
-> **Experiences**
+> ## Experiences
 
 `Prettier - Code formatter`: Prettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary. [link](https://www.vsixhub.com/vsix/47/)
 
@@ -84,7 +181,7 @@ print "This is a test"  invalid sytax
 
 `Code Spell Checker`: A basic spell checker that works well with code and documents. The goal of this spell checker is to help catch common spelling errors while keeping the number of false positives low.[link](https://www.vsixhub.com/vsix/1949/)
 
-> **Extra**
+> ## Extras
 
 `SQL Formatter`: Format SQL files using the sql-formatter-plus npm package. [link](https://www.vsixhub.com/vsix/5708/)
 

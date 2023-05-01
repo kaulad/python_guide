@@ -2,7 +2,7 @@
 This module is to show example of pylint
 """
 
-class MyRect:
+class MyRect: # pylint: disable=too-few-public-methods
     """ This class is used for rectangle. """
     def __init__(self, width: float, height: float) -> None:
         """ init a rectangle
