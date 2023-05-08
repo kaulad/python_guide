@@ -1,4 +1,7 @@
 vsix/
+lib/
 .vscode/
+__pycache__/
+.pytest_cache/
 *.ipynb
 *.json

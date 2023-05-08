@@ -1,15 +1,23 @@
 # Introduction
+
 This repository aims to educate data scientist to write better and more beautiful python codes using available open-source tools.
 
 Enjoy!
+
 ## PEP8 - Style Guide for Pyton Code [link](https://peps.python.org/pep-0008/)
+
+- [Book: Beyond the Basic Stuff with Python](https://inventwithpython.com/beyond/) Chapter 1-14
 - [How to Write Beautiful Python Code With PEP 8](https://realpython.com/python-pep8/)
 - [Nine simple steps for better-looking python code](https://towardsdatascience.com/nine-simple-steps-for-better-looking-python-code-87e5d9d3b1cf)
 - [15 common coding mistakes data scientist make in Python (and how to fix them)](https://towardsdatascience.com/15-common-coding-mistakes-data-scientist-make-in-python-and-how-to-fix-them-7760467498af)
+- [Python’s Missing Batteries: Essential Libraries You’re Missing Out On](https://betterprogramming.pub/pythons-missing-batteries-essential-libraries-you-re-missing-out-on-12853e5258d2)
 - [How to Automate Python Code Formatting (using Black, YAPF and isort)](https://www.youtube.com/watch?v=q2d5vrw1Lss)
+- [Markdown Tutorial](https://agea.github.io/tutorial.md/), [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+- [Pythonic code](https://towardsdatascience.com/how-to-write-pythonic-code-208ec1513c49#:~:text=In%20the%20Python%20community%2C%20Pythonic,maintainability%2C%20readability%20and%20efficiency%20perspective)
 
 ![example_bad_pep8.py](/img/example_bad.PNG)
-```sh
+
+``` sh
 pylint example_bad_pep8.py
 
 ************* Module example_bad_pep8
@@ -28,6 +36,7 @@ Your code has been rated at 3.08/10
 ```
 
 ![example_good_pep8.py](/img/example_good.PNG)
+
 ```sh
 pylint example_good_pep8.py
 
@@ -45,6 +54,7 @@ Your code has been rated at 10.00/10 (previous run: 9.00/10, +1.00)
 ```
 
 ## Auto-formatter
+
 - black [https://github.com/psf/black](https://github.com/psf/black)
 - yapf [https://github.com/google/yapf](https://github.com/google/yapf) (own by Google)
 - isort [https://github.com/PyCQA/isort](https://github.com/PyCQA/isort)
@@ -96,7 +106,7 @@ def f(a):
 
 ```
 
-# Visual Code and  useful extensions
+## Visual Code and  useful extensions
 
 1. Install **`Visual Studio Code`** [link](https://code.visualstudio.com/download)
 
@@ -108,7 +118,7 @@ def f(a):
 
 `Pylance`:  Pylance has the ability to supercharge your Python IntelliSense experience with rich type information, helping you write better code faster. [link](https://www.vsixhub.com/vsix/116403/) I don't kkkow
 
-`Pylint`:  Pylint is a static code analyser for Python. It analyses your code without actually running it. It checks for errors, enforces a coding standard, looks for code smells, and can make suggestions about how the code could be refactored. [link](https://www.vsixhub.com/vsix/112166/)
+`Pylint`:  Pylint is a static code analyser for Python. It analyses your code without actually running it. It checks for errors, enforces a coding standard, looks for code smells, and can make suggestions about how the code could be refactored. [link](https://www.vsixhub.com/vsix/112166/), [Pylint Message Code Documentation](https://pylint.readthedocs.io/en/latest/user_guide/messages/messages_overview.html)
 
 `Code Runner`:  Run code snippet or code file for multiple languages: C, C++, Java, JavaScript, PHP, Python and custom command [link](https://www.vsixhub.com/vsix/43/)
 
@@ -181,6 +191,8 @@ print "This is a test"  invalid sytax
 
 `Code Spell Checker`: A basic spell checker that works well with code and documents. The goal of this spell checker is to help catch common spelling errors while keeping the number of false positives low.[link](https://www.vsixhub.com/vsix/1949/)
 
+`Todo Tree`:  Searches (using ripgrep) your workspace for comment tags like TODO and FIXME, and displays them in a tree view in the activity bar.[link](https://www.vsixhub.com/vsix/2047/)
+
 > ## Extras
 
 `SQL Formatter`: Format SQL files using the sql-formatter-plus npm package. [link](https://www.vsixhub.com/vsix/5708/)
@@ -189,4 +201,9 @@ print "This is a test"  invalid sytax
 
 `Markdown Preview Enhanced`: Provides you with many useful functionalities such as automatic scroll sync, math typesetting, mermaid, PlantUML, pandoc, PDF export, code chunk, presentation writer, etc .[link](https://www.vsixhub.com/vsix/1953/)'
 
-`markdownlint`:  Includes a library of rules to encourage standards and consistency for Markdown files. It is powered by the markdownlint library for Node.js (which was inspired by markdownlint for Ruby). Linting is performed by the markdownlint-cli2 engine. [link](https://www.vsixhub.com/vsix/1940/)
+`markdownlint`:  Includes a library of rules to encourage standards and consistency for Markdown files. It is powered by the markdownlint library for Node.js (which was inspired by markdownlint for Ruby). Linting is performed by the markdownlint-cli2 engine. [link](https://www.vsixhub.com/vsix/1940/), [Markdownlint code](https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md#md032---lists-should-be-surrounded-by-blank-lines)
+
+
+## Good Reading
+
+`__init__.py Understanding-python-imports-init-py-and-pythonpath`: [link](https://towardsdatascience.com/understanding-python-imports-init-py-and-pythonpath-once-and-for-all-4c5249ab6355)
