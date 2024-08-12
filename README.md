@@ -207,3 +207,9 @@ print "This is a test"  invalid sytax
 ## Good Reading
 
 `__init__.py Understanding-python-imports-init-py-and-pythonpath`: [link](https://towardsdatascience.com/understanding-python-imports-init-py-and-pythonpath-once-and-for-all-4c5249ab6355)
+
+## Conda multiple environments
+
+conda install ipykernel
+
+conda install nb_conda_kernels
